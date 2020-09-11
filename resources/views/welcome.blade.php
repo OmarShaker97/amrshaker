@@ -227,9 +227,30 @@
             </div>
         </section>
         <!-- Team-->
-        <x-team>
-            
-        </x-team>
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">People I have worked with</h2>
+                    <h3 class="section-subheading text-muted">.</h3>
+                </div>
+                <div class="row">
+                    @foreach($team as $member)
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{{$member->image_path}}" alt="" />
+                            <h4>{{$member->name}}</h4>
+                            <p class="text-muted">{{$member->job}}</p>
+                            <a class="btn btn-dark btn-social mx-2" href="{{$member->facebook_url}}"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="{{$member->twitter_url}}"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted"></p></div>
+                </div>
+            </div>
+        </section>
         <!-- Clients-->
         <div class="py-5">
             <div class="container">
